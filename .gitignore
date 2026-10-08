@@ -1,0 +1,31 @@
+﻿.venv/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+*.bak
+*.zip
+*.log
+.DS_Store
+Thumbs.db
+
+# Material local de desarrollo
+scripts/
+tests/
+docs/
+artifacts/
+logs/
+akrivis_head_refinement/
+akrivis_head_search/
+akrivis_local_ft/
+akrivis_search_prep/
+eikonorasis-cifar10-akrivis-sprint5/
+
+# Documentación de sprints
+README_OLD.md
+README_SPRINT*.md
+SPRINT*.md
+SPRINT_*.md
+DEPLOYMENT_CHECKLIST.md
+MANIFEST_*.sha256
+requirements-dev.txt
+pytest.ini

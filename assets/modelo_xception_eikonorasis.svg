@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 560">
+<rect width="1400" height="560" rx="24" fill="#F7F4EE"/>
+<text x="60" y="70" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#23262B">Eikonorasís CIFAR-10 akrivís</text>
+<text x="60" y="112" font-family="Arial,sans-serif" font-size="22" fill="#62666D">Modelo evaluador — Xception + Transfer Learning</text>
+<g font-family="Arial,sans-serif">
+<rect x="60" y="185" width="190" height="150" rx="18" fill="#FFFFFF" stroke="#C88A12" stroke-width="3"/>
+<text x="155" y="225" text-anchor="middle" font-size="22" font-weight="700" fill="#23262B">Entrada</text>
+<text x="155" y="265" text-anchor="middle" font-size="20" fill="#23262B">RGB</text>
+<text x="155" y="298" text-anchor="middle" font-size="20" fill="#23262B">160 × 160 × 3</text>
+<line x1="250" y1="260" x2="315" y2="260" stroke="#C88A12" stroke-width="5"/>
+<polygon points="315,260 298,250 298,270" fill="#C88A12"/>
+<rect x="325" y="185" width="220" height="150" rx="18" fill="#FFFFFF" stroke="#C88A12" stroke-width="3"/>
+<text x="435" y="225" text-anchor="middle" font-size="22" font-weight="700" fill="#23262B">Preprocesamiento</text>
+<text x="435" y="265" text-anchor="middle" font-size="19" fill="#23262B">RGB + resize</text>
+<text x="435" y="298" text-anchor="middle" font-size="19" fill="#23262B">160 × 160</text>
+<line x1="545" y1="260" x2="610" y2="260" stroke="#C88A12" stroke-width="5"/>
+<polygon points="610,260 593,250 593,270" fill="#C88A12"/>
+<rect x="620" y="160" width="250" height="200" rx="18" fill="#F8EED6" stroke="#C88A12" stroke-width="3"/>
+<text x="745" y="205" text-anchor="middle" font-size="26" font-weight="700" fill="#23262B">Xception</text>
+<text x="745" y="245" text-anchor="middle" font-size="20" fill="#23262B">ImageNet</text>
+<text x="745" y="278" text-anchor="middle" font-size="19" fill="#23262B">base preentrenada</text>
+<text x="745" y="311" text-anchor="middle" font-size="19" fill="#23262B">extracción de características</text>
+<text x="745" y="342" text-anchor="middle" font-size="17" fill="#62666D">fine-tuning controlado</text>
+<line x1="870" y1="260" x2="935" y2="260" stroke="#C88A12" stroke-width="5"/>
+<polygon points="935,260 918,250 918,270" fill="#C88A12"/>
+<rect x="945" y="185" width="190" height="150" rx="18" fill="#FFFFFF" stroke="#C88A12" stroke-width="3"/>
+<text x="1040" y="225" text-anchor="middle" font-size="22" font-weight="700" fill="#23262B">Clasificador</text>
+<text x="1040" y="265" text-anchor="middle" font-size="20" fill="#23262B">Dense(10)</text>
+<text x="1040" y="298" text-anchor="middle" font-size="20" fill="#23262B">Softmax</text>
+<line x1="1135" y1="260" x2="1200" y2="260" stroke="#C88A12" stroke-width="5"/>
+<polygon points="1200,260 1183,250 1183,270" fill="#C88A12"/>
+<rect x="1210" y="185" width="130" height="150" rx="18" fill="#FFFFFF" stroke="#C88A12" stroke-width="3"/>
+<text x="1275" y="225" text-anchor="middle" font-size="20" font-weight="700" fill="#23262B">Salida</text>
+<text x="1275" y="265" text-anchor="middle" font-size="18" fill="#23262B">10 clases</text>
+<text x="1275" y="298" text-anchor="middle" font-size="18" fill="#23262B">Top-3</text>
+<text x="1275" y="326" text-anchor="middle" font-size="18" fill="#23262B">confianza</text>
+</g>
+<text x="60" y="450" font-family="Arial,sans-serif" font-size="21" fill="#23262B">Flujo: imagen → preprocesamiento → Xception → Transfer Learning → fine-tuning → clasificación</text>
+<text x="60" y="495" font-family="Arial,sans-serif" font-size="18" fill="#62666D">CIFAR-10 · 10 categorías · inferencia con model_final.keras</text>
+</svg>
