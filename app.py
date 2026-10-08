@@ -465,19 +465,92 @@ Transfer Learning → fine-tuning → Softmax → predicción.
 
 def render_institutional() -> None:
     """Identificación académica e institucional del proyecto."""
-    st.subheader('Institucional')
-    st.caption('Identificación académica de Eikonorasís CIFAR-10 akrivís y del contexto formativo en el que fue desarrollado.')
-    st.markdown('\n        <div class="analysis-box">\n        <strong style="font-size:.82rem;letter-spacing:.05em;">PROYECTO ACADÉMICO</strong><br><br>\n        <strong style="font-size:1.35rem;">INSTITUTO INTERNACIONAL DE AGUASCALIENTES</strong><br>\n        Maestría en Inteligencia Artificial para la Transformación Digital\n        </div>\n        ', unsafe_allow_html=True)
-    st.link_button('Sitio oficial del Instituto Internacional de Aguascalientes', 'https://www.iinternacional.edu.mx/')
-    st.markdown('### Información académica')
-    st.markdown('\n        **Asignatura:** Aprendizaje Profundo  \n        **Aplicación:** Eikonorasís CIFAR-10 akrivís  \n        **Proyecto:** Diseño, implementación, entrenamiento, evaluación y\n        despliegue web de una red neuronal convolucional en Python para la\n        clasificación multiclase de imágenes mediante CIFAR-10.\n        ')
-    st.markdown('### Autoría académica')
-    st.markdown('\n        **Alumno:** Antonio Nicolás Toro González  \n        **Tutora:** Dra. Claudia Andrea Vidales Basurto\n        ')
-    st.markdown('### Descripción del proyecto')
-    st.write('Eikonorasís CIFAR-10 akrivís es una aplicación web interactiva desarrollada en Python que utiliza una Xception + Transfer Learning para clasificar imágenes en las diez categorías de CIFAR-10. El proyecto integra preparación y partición de datos, preprocesamiento, data augmentation, diseño de la arquitectura, entrenamiento, validación, evaluación sobre un conjunto de prueba independiente, análisis de errores, inferencia y despliegue web.')
-    st.markdown('### Identificación técnica')
-    institutional_tech = pd.DataFrame({'Componente': ['Lenguaje', 'Modelo', 'Deep Learning', 'Preprocesamiento', 'Evaluación', 'Interfaz web', 'Dataset', 'Repositorio', 'Aplicación web'], 'Tecnología / referencia': ['Python 3.11', 'Xception + Transfer Learning para clasificación multiclase', 'TensorFlow / Keras + Keras Applications', 'Pillow + NumPy', 'scikit-learn + pandas', 'Streamlit', 'CIFAR-10 — UCI Machine Learning Repository', 'https://github.com/edtech-mx-ve/eikonorasis-cifar10', 'https://eikonorasis-cifar10.streamlit.app/']})
-    st.dataframe(institutional_tech, hide_index=True, width='stretch')
+    st.subheader("Institucional")
+    st.caption(
+        "Identificación académica de Eikonorasís CIFAR-10 akrivís y del contexto "
+        "formativo en el que fue desarrollado."
+    )
+
+    st.markdown(
+        """
+        <div class="analysis-box">
+        <strong style="font-size:.82rem;letter-spacing:.05em;">PROYECTO ACADÉMICO</strong><br><br>
+        <strong style="font-size:1.35rem;">INSTITUTO INTERNACIONAL DE AGUASCALIENTES</strong><br>
+        Maestría en Inteligencia Artificial para la Transformación Digital
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.link_button(
+        "Sitio oficial del Instituto Internacional de Aguascalientes",
+        "https://www.iinternacional.edu.mx/",
+    )
+
+    st.markdown("### Información académica")
+    st.markdown(
+        """
+        **Asignatura:** Aprendizaje Profundo
+
+        **Aplicación:** Eikonorasís CIFAR-10 akrivís
+
+        **Proyecto:** Diseño, implementación, entrenamiento, evaluación y despliegue
+        web de un modelo de aprendizaje profundo basado en **Xception, Transfer
+        Learning y fine-tuning controlado**, desarrollado en Python para la
+        clasificación multiclase de imágenes mediante CIFAR-10.
+        """
+    )
+
+    st.markdown("### Autoría académica")
+    st.markdown(
+        """
+        **Alumno:** Antonio Nicolás Toro González
+
+        **Tutora:** Dra. Claudia Andrea Vidales Basurto
+        """
+    )
+
+    st.markdown("### Descripción del proyecto")
+    st.write(
+        "Eikonorasís CIFAR-10 akrivís es una aplicación web interactiva "
+        "desarrollada en Python que utiliza **Xception + Transfer Learning**, "
+        "con ajuste fino controlado, para clasificar imágenes en las diez "
+        "categorías oficiales de CIFAR-10. El proyecto integra preparación "
+        "y partición de datos, preprocesamiento, aumento de datos, adaptación "
+        "de una arquitectura Xception preentrenada, entrenamiento, validación, "
+        "evaluación sobre un conjunto de prueba independiente, análisis de "
+        "resultados, inferencia y despliegue web mediante Streamlit."
+    )
+
+    st.markdown("### Identificación técnica")
+    institutional_tech = pd.DataFrame(
+        {
+            "Componente": [
+                "Lenguaje",
+                "Modelo",
+                "Deep Learning",
+                "Preprocesamiento",
+                "Evaluación",
+                "Interfaz web",
+                "Dataset",
+                "Repositorio",
+                "Aplicación web",
+            ],
+            "Tecnología / referencia": [
+                "Python 3.11",
+                "Xception + Transfer Learning + fine-tuning",
+                "TensorFlow / Keras + Keras Applications",
+                "Pillow + NumPy",
+                "scikit-learn + pandas",
+                "Streamlit",
+                "CIFAR-10",
+                "https://github.com/edtech-mx-ve/eikonorasis-cifar10-akrivis",
+                "https://eikonorasis-cifar10-akrivis.streamlit.app/",
+            ],
+        }
+    )
+    st.dataframe(institutional_tech, hide_index=True, width="stretch")
+
 
 def main() -> None:
     render_header()
